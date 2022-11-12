@@ -23,17 +23,6 @@ body {
      background: #7021d2;
      color: #fff;
 }
-
- @keyframes glitch {
-     0% {
-         opacity: 0;
-         left: 0;
-    }
-     40%, 80% {
-         opacity: 1;
-         left: -2px;
-    }
-}
 .sosyalbutonlar{
 	margin-top: 50px;
 	display: inline-block;
@@ -90,6 +79,18 @@ body {
        background-color: #000000;
       transform: rotate(360deg);
       border-radius: 50%;	 
+}
+
+
+ @keyframes glitch {
+     0% {
+         opacity: 0;
+         left: 0;
+    }
+     40%, 80% {
+         opacity: 1;
+         left: -2px;
+    }
 }
  @keyframes imlec {
      0% {
