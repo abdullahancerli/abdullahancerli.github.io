@@ -1,0 +1,147 @@
+body {
+    background-color: #111;
+    color: #00afff;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+.terminal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 600px;
+    border: 3px solid #00afff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 175, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.terminal-header {
+    height: 30px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-version {
+    padding-left: 10px;
+}
+
+.terminal-buttons {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.terminal-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #5f5f5f;
+    cursor: pointer;
+}
+
+.terminal-content {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #000;
+}
+
+.terminal-prompt {
+    color: #00afff;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.terminal-command {
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.terminal-command.output {
+    color: #ff0000; /* Çıktı mesajının rengi */
+}
+
+.terminal-command br {
+    display: none;
+}
+
+.terminal-input {
+    height: 30px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.terminal-input input {
+    background-color: transparent;
+    border: none;
+    color: #00afff;
+    outline: none;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 1024px) {
+    .terminal-window {
+      width: 90%;
+      height: 70vh;
+      border: 2px solid #00afff;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 175, 255, 0.5);
+      margin: 5px;
+    }
+  
+    .terminal-content {
+      padding: 8px;
+    }
+  }
+  
+@media (max-width: 600px) {
+    .terminal-window {
+        width: 90%;
+        height: 90vh;
+        border: 2px solid #00afff;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 175, 255, 0.5);
+        margin: 5px;
+    }
+
+    .terminal-content {
+        flex-grow: 1;
+        padding: 8px;
+        overflow-y: auto;
+    }
+
+    .terminal-input {
+        padding: 3px;
+    }
+
+    .terminal-input input {
+        height: 20px;
+    }
+}
